@@ -4,7 +4,7 @@ import { Answer } from 'src/database/models/answer.model';
 import { AnswerService } from './answer.service';
 
 @Module({
-    imports: [SequelizeModule.forFeature([Answer])],
-    providers: [AnswerService],
+  imports: [SequelizeModule.forFeature([Answer])],
+  providers: [AnswerService],
 })
 export class AnswerModule {}

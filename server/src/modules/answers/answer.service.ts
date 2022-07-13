@@ -4,12 +4,12 @@ import { Answer } from 'src/database/models/answer.model';
 
 @Injectable()
 export class AnswerService {
-    constructor(
-        @InjectModel(Answer)
-        private answerModel: typeof Answer
-    ) {}
+  constructor(
+    @InjectModel(Answer)
+    private answerModel: typeof Answer,
+  ) {}
 
-    create(answer: Answer) {
-        return;
-    }
+  create(answer: Answer) {
+    return;
+  }
 }

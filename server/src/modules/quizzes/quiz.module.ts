@@ -6,8 +6,8 @@ import { QuizzesController } from './quiz.controller';
 import { QuizzesService } from './quiz.service';
 
 @Module({
-    imports: [SequelizeModule.forFeature([Quiz, QuizUser])],
-    controllers: [QuizzesController],
-    providers: [QuizzesService],
+  imports: [SequelizeModule.forFeature([Quiz, QuizUser])],
+  controllers: [QuizzesController],
+  providers: [QuizzesService],
 })
 export class QuizzesModule {}

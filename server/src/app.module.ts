@@ -9,16 +9,16 @@ import { UsersModule } from './modules/users/user.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { Dialect } from 'sequelize/types';
 
-declare var process: {
+declare let process: {
   env: {
-      DATABASE_DIALECT: Dialect,
-      DATABASE_URL: string,
-      DATABASE_PORT: number,
-      DATABASE_USERNAME: string,
-      DATABASE_PASSWORD: string,
-      DATABASE_NAME: string
-  }
-}
+    DATABASE_DIALECT: Dialect;
+    DATABASE_URL: string;
+    DATABASE_PORT: number;
+    DATABASE_USERNAME: string;
+    DATABASE_PASSWORD: string;
+    DATABASE_NAME: string;
+  };
+};
 
 @Module({
   imports: [
@@ -31,12 +31,12 @@ declare var process: {
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
       autoLoadModels: true,
-      synchronize: true
+      synchronize: true,
     }),
-    UsersModule, 
-    QuizzesModule, 
-    AnswerModule, 
-    AuthModule
-  ]
+    UsersModule,
+    QuizzesModule,
+    AnswerModule,
+    AuthModule,
+  ],
 })
 export class AppModule {}

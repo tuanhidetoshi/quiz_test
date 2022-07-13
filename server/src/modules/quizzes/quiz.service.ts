@@ -4,16 +4,16 @@ import { Quiz } from 'src/database/models/quiz.model';
 
 @Injectable()
 export class QuizzesService {
-    constructor(
-        @InjectModel(Quiz)
-        private quizModel: typeof Quiz
-    ) {}
+  constructor(
+    @InjectModel(Quiz)
+    private quizModel: typeof Quiz,
+  ) {}
 
-    create(quiz: Quiz) {
-        return;
-    }
+  create(quiz: Quiz) {
+    return;
+  }
 
-    answerTheQuiz(quizId: string, userId: string, answerId: string) {
-        return;
-    }
+  answerTheQuiz(quizId: string, userId: string, answerId: string) {
+    return;
+  }
 }
